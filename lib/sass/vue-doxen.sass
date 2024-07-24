@@ -1,0 +1,155 @@
+$red: #F00
+$disabledGray: #4E4F5F
+$transparent: transparent
+$gray50: rgba(68, 69, 85, 0.5)
+$black10: rgba(0, 1, 16, 0.10)
+
+/**
+ * We use :where([data-*]) to produce the lowest specificity
+ * selectors so they do not override any user provided css.
+ */
+
+/* Props Playground */
+:where([data-applied-style-tokens~="propsPlaygroundForm"])
+    display: flex
+    flex-wrap: wrap
+
+/* Basic styling on field sets */
+:where([data-applied-style-tokens~="formFieldFieldset"])
+    display: inline-flex
+    flex-direction: column
+    flex-grow: 1
+    background: $black10
+    border: 0px
+    margin: 10px
+    padding: 10px
+    min-inline-size: min-content
+
+/* Basic legend styling */
+:where([data-applied-style-tokens~="formFieldLegend"])
+    float: left
+    font-weight: bold
+
+/* Whitespace on Radio dial names */
+:where([data-applied-style-tokens~="formFieldRadioDialNameLabel"])
+    margin-right: 10px
+
+/* Keep checkbox and name on same line vertically centered */
+:where([data-applied-style-tokens~="formFieldCheckboxContainer"])
+    display: flex
+    align-items: end
+
+/* Required and Error states */
+:where([data-applied-style-tokens~="formFieldCheckboxError"]),
+:where([data-applied-style-tokens~="formFieldCheckboxNameError"]),
+:where([data-applied-style-tokens~="formFieldDropdownError"]),
+:where([data-applied-style-tokens~="formFieldError"]),
+:where([data-applied-style-tokens~="formFieldLegendError"]),
+:where([data-applied-style-tokens~="formFieldRadioDialNameError"]),
+:where([data-applied-style-tokens~="formFieldRequired"]),
+:where([data-applied-style-tokens~="formFieldTextFieldError"]),
+:where([data-applied-style-tokens~="formFieldTextareaError"])
+    color: $red
+
+/* Disabled styling */
+:where([data-applied-style-tokens~="formFieldLegendDisabled"])
+    color: $disabledGray
+
+/* Sidebar */
+:where([data-applied-style-tokens~="sidebarContainer"])
+    display: flex
+    flex-direction: column
+
+/* Remove styling on sidebar buttons unless active */
+:where([data-applied-style-tokens~="sidebarButton"])
+    background: $transparent
+    border: 0px
+
+/* Give some affordance to currently selected sidebar component */
+:where([data-applied-style-tokens~="sidebarButtonActive"])
+    background: $gray50
+
+/* Remove white-space around paragraph */
+:where([data-applied-style-tokens~="formFieldError"]),
+:where([data-applied-style-tokens~="formFieldMessage"])
+    margin-top: 0px
+    margin-bottom: 0px
+
+/* The required asterisk */
+:where([data-applied-style-tokens~="formFieldRequired"])
+    padding-left: 3px
+
+/* Monospace font for textareas with code in them */
+:where([data-applied-style-tokens~="formFieldTextareaCode"])
+    font-family: monospace
+
+/* pull items to the right for layout clarity */
+:where([data-applied-style-tokens~="codeSwapperFileName"])
+    float: right
+
+:where([data-applied-style-tokens~="codeBoxContainer"])
+    position: relative
+
+/* Make the selected button bold for affordance */
+:where([data-applied-style-tokens~="buttonSelected"]),
+:where([data-applied-style-tokens~="sidebarButtonSelected"]),
+:where([data-applied-style-tokens~="tabButtonSelected"])
+    font-weight: bold
+
+/* Tabs layout for clarity */
+:where([data-applied-style-tokens~="tabsHeader"])
+    display: flex
+    flex-direction: row
+    align-items: baseline
+    justify-content: space-between
+
+/* Make tab buttons flex */
+:where([data-applied-style-tokens~="tabsButtonContainer"])
+    display: flex
+
+/* Use flexbox on emit log header for layout */
+:where([data-applied-style-tokens~="emitLogHeader"])
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+:where([data-applied-style-tokens~="doxenPlainText"]),
+:where([data-applied-style-tokens~="emitLogTableContainer"])
+    max-width: 800px
+    overflow: auto
+
+@media (width < 700px)
+    :where([data-applied-style-tokens~="tabsButtonContainer"])
+        flex-direction: column
+    :where([data-applied-style-tokens="tabsHeader"])
+        align-items: flex-end
+
+/**
+ *  VUETIFY
+ */
+
+/* Had to increase specificity to get around Vuetify's styles */
+.v-application
+    :where([data-applied-style-tokens~="formFieldCheckbox"]),
+    :where([data-applied-style-tokens~="formFieldDropdown"]),
+    :where([data-applied-style-tokens~="formFieldTextarea"]),
+    :where([data-applied-style-tokens~="formFieldTextField"])
+        appearance: auto
+        background-color: revert
+    :where([data-applied-style-tokens~="tabsHeader"])
+        align-items: center
+    :where([data-applied-style-tokens~="tabsButtonContainer"])
+        flex: unset
+
+@media (width < 700px)
+    .v-application
+        :where([data-applied-style-tokens~="tabsHeader"])
+            height: auto
+            overflow: auto
+
+@media (width < 400px)
+    .v-application
+        :where([data-applied-style-tokens~="codeSwapperFileName"])
+            padding: 12px
+        :where([data-applied-style-tokens~="tabsHeader"])
+            flex-direction: column

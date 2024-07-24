@@ -1,0 +1,116 @@
+{
+  "name": "your-library",
+  "version": "0.1.10",
+  "description": "The world's best Vue.js component documentation tool!",
+  "scripts": {
+    "start": "vite dev --config vite.config.docs.js",
+    "preview": "vite preview --config vite.config.docs.js",
+    "prepublishOnly": "npm run build",
+    "build": "npm run build:library && npm run build:docs",
+    "build:docs": "vite build --config vite.config.docs.js",
+    "build:library": "vite build --config vite.config.lib.js",
+    "postbuild": "node ./scripts/postbuild.js",
+    "lint": "eslint --ext .js,.vue --config=.eslintrc.cjs lib scripts tests app vite.config.*.js .eslintrc.cjs",
+    "fix": "eslint --fix --ext .js,.vue --config=.eslintrc.cjs lib scripts tests app vite.config.*.js .eslintrc.cjs",
+    "unit": "cross-env TZ=America/New_York vitest --coverage --config vite.config.lib.js",
+    "test": "cross-env TZ=America/New_York vitest run --coverage --config vite.config.lib.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.24.8",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitest/coverage-v8": "^2.0.4",
+    "@vue/test-utils": "^2.4.6",
+    "axe-core": "^4.9.1",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-tjw-base": "^2.0.0",
+    "eslint-config-tjw-import": "^1.0.0",
+    "eslint-config-tjw-jest": "^2.0.0",
+    "eslint-config-tjw-vue": "^3.0.0",
+    "eslint-import-resolver-webpack": "^0.13.8",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-vue": "^9.27.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.0",
+    "happy-dom": "^14.12.3",
+    "jest-serializer-vue-tjw": "^3.20.0",
+    "nprogress": "^0.2.0",
+    "vite": "^5.3.4",
+    "vitest": "^2.0.4",
+    "vue": "^3.4.33",
+    "vue-axe": "^3.1.2",
+    "vue-options-api-constants-plugin": "^1.0.1",
+    "vue-router": "^4.4.0"
+  },
+  "private": false,
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/your-library.umd.cjs",
+  "module": "./dist/your-library.js",
+  "sideEffects": false,
+  "unpkg": "./dist/your-library.iife.js",
+  "jsdelivr": "./dist/your-library.iife.js",
+  "exports": {
+    ".": {
+      "import": "./dist/your-library.js",
+      "require": "./dist/your-library.umd.cjs"
+    },
+    "./dist/your-library.js": {
+      "import": "./dist/your-library.js"
+    },
+    "./dist/your-library.cjs": {
+      "import": "./dist/your-library.cjs"
+    },
+    "./dist/your-library.iife.js": {
+      "import": "./dist/your-library.iife.js"
+    },
+    "./dist/your-library.umd.cjs": {
+      "import": "./dist/your-library.umd.cjs"
+    },
+    "./dist/your-library.css": {
+      "import": "./dist/your-library.css"
+    },
+    "./your-library.js": {
+      "import": "./dist/your-library.js"
+    },
+    "./your-library.mjs": {
+      "import": "./dist/your-library.js"
+    },
+    "./your-library.cjs": {
+      "import": "./dist/your-library.cjs"
+    },
+    "./your-library.iife.js": {
+      "import": "./dist/your-library.iife.js"
+    },
+    "./your-library.umd.cjs": {
+      "import": "./dist/your-library.umd.cjs"
+    },
+    "./your-library.css": {
+      "import": "./dist/your-library.css"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheJaredWilcurt/vue-component-docs-boilerplate.git"
+  },
+  "keywords": [
+    "vue",
+    "documentation",
+    "vue.js",
+    "component",
+    "library",
+    "docs"
+  ],
+  "author": "The Jared Wilcurt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheJaredWilcurt/vue-component-docs-boilerplate/issues"
+  },
+  "homepage": "https://github.com/TheJaredWilcurt/vue-component-docs-boilerplate#readme",
+  "volta": {
+    "node": "22.5.1"
+  }
+}
