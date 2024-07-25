@@ -1,4 +1,4 @@
-import library from '@/library.js';
+import library from '@/your-library.js';
 
 describe('Library export', () => {
   test('Exports Vue install function', () => {

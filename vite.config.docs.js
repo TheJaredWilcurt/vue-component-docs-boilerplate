@@ -12,15 +12,7 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'site'),
     rollupOptions: {
-      input: resolve(__dirname, 'index.html'),
-      output: {
-        manualChunks: {
-          nprogress: ['nprogress'],
-          'vue-axe': ['vue-axe'],
-          'vue-router': ['vue-router'],
-          vue: ['vue']
-        }
-      }
+      input: resolve(__dirname, 'index.html')
     }
   },
   optimizeDeps: {
