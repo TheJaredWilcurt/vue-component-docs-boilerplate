@@ -5,10 +5,13 @@ A boilerplate for creating a Vue Component library documentation website.
 
 ## Features
 
+1. Uses [Vue-Doxen](https://thejaredwilcurt.com/vue-doxen) which automatically documents your components.
 1. Allows you to do component development, and docs site development from the same repo, without being a monorepo.
-  * Just uses two Vite configs, and references them in the `package.json` for different scripts
+  * Just uses two Vite configs, and references them in the `package.json` for different scripts.
 1. Project structure and dependencies already set up.
-1. Uses Vue-Doxen which automatically documents your components.
+1. Unit testing example already set up for your component library.
+1. Example Button component
+   * To show how to document and test your components.
 
 
 ## Running Locally

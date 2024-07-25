@@ -17,7 +17,6 @@ export default defineConfig({
         manualChunks: {
           nprogress: ['nprogress'],
           'vue-axe': ['vue-axe'],
-          'vue-options-api-constants-plugin': ['vue-options-api-constants-plugin'],
           'vue-router': ['vue-router'],
           vue: ['vue']
         }
@@ -25,6 +24,7 @@ export default defineConfig({
     }
   },
   optimizeDeps: {
+    // Ensures this doesn't get shipped to prod
     include: ['axe-core']
   },
   plugins: [vue()],
