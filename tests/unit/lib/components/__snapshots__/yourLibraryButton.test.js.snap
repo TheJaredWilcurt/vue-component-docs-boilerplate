@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`YourLibraryButton.vue > Props > Button is selected 1`] = `<button aria-pressed="true" class="selected">Button Text</button>`;
+exports[`YourLibraryButton.vue > Props > Button is selected 1`] = `<button aria-pressed="true" class="selected primary">Button Text</button>`;
 
 exports[`YourLibraryButton.vue > Props > Button status is set 1`] = `<button aria-pressed="false" class="success">Button Text</button>`;
 
-exports[`YourLibraryButton.vue > Renders correctly 1`] = `<button aria-pressed="false" class>Button Text</button>`;
+exports[`YourLibraryButton.vue > Renders correctly 1`] = `<button aria-pressed="false" class="primary">Button Text</button>`;
