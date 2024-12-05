@@ -41,10 +41,17 @@ A boilerplate for creating a Vue Component library documentation website.
   * `npm start` will launch the app for local development
   * Code lives in `app` folder
   * Uses `vite.config.doc.js`
-  * `npm run build` will produce `docs` folder
+  * `npm run build` will produce `site` folder
+  * File import alias `@@@` points to the `docs` folder
 * **Library**
-  * To manually test/develop the library use the docs site via `npm start`
+  * To manually test and develop your library use the docs site via `npm start`
   * Code lives in the `lib` folder
   * Uses `vite.config.lib.js`
   * `npm run build` will produce `dist` folder
+  * File import `@` points to the `lib` folder
+* **Tests**
   * `npm t` runs unit tests for the library
+  * File import alias `@@` points to the `tests` folder
+* **Scripts**
+  * This folder contains simple Node scripts.
+  * It currently has one script that runs automatically after `npm run build` to create a 404.html file.
