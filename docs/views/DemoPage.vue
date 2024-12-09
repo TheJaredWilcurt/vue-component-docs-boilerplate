@@ -7,14 +7,7 @@
 </template>
 
 <script>
-import { styleTokensBootstrap5, VueDoxen } from 'vue-doxen';
-
-/**
- * You can pick any of the Highlight JS themes you want.
- * They are listed here:
- * https://thejaredwilcurt.com/vue-doxen/styles#syntax
- */
-import 'highlightjs/styles/ir-black.css';
+import { styleTokens } from '@@@/helpers/styleTokens.js';
 
 /**
  * This is a completely optional CSS file
@@ -35,16 +28,9 @@ export default {
       required: true
     }
   },
-  computed: {
-    styleTokens: function () {
-      /**
-       * These styleTokens are unique to Bootstrap,
-       * you should remove them and replace them with your own
-       * that work for your styles.
-       * See: https://thejaredwilcurt.com/vue-doxen/styles
-       */
-      return styleTokensBootstrap5;
-    }
+  // See: vue-options-api-constants-plugin
+  constants: {
+    styleTokens
   }
 };
 </script>

@@ -39,3 +39,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.btn {
+  border: 0px;
+}
+</style>
