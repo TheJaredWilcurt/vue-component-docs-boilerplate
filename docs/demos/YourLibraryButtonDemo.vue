@@ -16,9 +16,9 @@ export default {
     demo: function () {
       return {
         // To see what can be documented in this demo object:
-        // https://thejaredwilcurt.com/vue-doxen/documenting#documenting
+        // https://TheJaredWilcurt.com/vue-doxen/documenting#documenting
         component: COMPONENT,
-        description: '<p>Common button component</p>',
+        description: '<p>An accessible button component with various status colors, and an active/pressed state.</p>',
         importStatement: 'import { ' + COMPONENT.name + ' } from \'your-library\';',
         propsToDemo: {
           active: {

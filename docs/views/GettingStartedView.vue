@@ -38,9 +38,8 @@
 </template>
 
 <script>
-import { DoxenCodeBox } from 'vue-doxen';
-
 import { styleTokens } from '@@@/helpers/styleTokens.js';
+import { DoxenCodeBox } from 'vue-doxen';
 
 const GLOBAL_INSTALL_EXAMPLE = `
 // main.js

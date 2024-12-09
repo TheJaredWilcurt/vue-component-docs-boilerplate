@@ -8,6 +8,7 @@
 
 <script>
 import { styleTokens } from '@@@/helpers/styleTokens.js';
+import { VueDoxen } from 'vue-doxen';
 
 /**
  * This is a completely optional CSS file
