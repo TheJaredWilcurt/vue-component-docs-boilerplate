@@ -4,7 +4,7 @@ import testHelpers from '@@/unit/testHelpers.js';
 
 describe('YourLibraryButton.vue', () => {
   // Props
-  const selected = true;
+  const active = true;
   const status = 'success';
   const requiredProps = {};
 
@@ -30,8 +30,8 @@ describe('YourLibraryButton.vue', () => {
   });
 
   describe('Props', () => {
-    test('Button is selected', async () => {
-      const wrapper = await setupWrapper({ selected });
+    test('Button is active', async () => {
+      const wrapper = await setupWrapper({ active });
 
       expect(wrapper)
         .toMatchSnapshot();
