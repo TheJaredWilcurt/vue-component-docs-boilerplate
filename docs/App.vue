@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row">
       <SideBar class="col-xl-2 col-lg-3" />
-      <main aria-label="main" class="col-xl-10 col-lg-9">
+      <main aria-label="main" class="col-xl-10 col-lg-9 mt-5">
         <RouterView />
       </main>
     </div>

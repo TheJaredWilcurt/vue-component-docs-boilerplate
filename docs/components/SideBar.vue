@@ -1,11 +1,13 @@
 <template>
   <aside>
     <div class="center">
-      <img
-        alt="Your Logo"
-        class="logo"
-        src="../assets/logo.svg"
-      />
+      <Router-Link :to="{ name: 'home' }">
+        <img
+          alt="Your Library Logo"
+          class="logo"
+          src="../assets/logo.svg"
+        />
+      </Router-Link>
       <h1>Your Library</h1>
     </div>
     <nav aria-label="sidebar" class="nav flex-column">

@@ -10,8 +10,8 @@
 import { styleTokensBootstrap5, VueDoxen } from 'vue-doxen';
 
 /**
- * You can pick any of the Highlight JS themes you want:
- * Listed here:
+ * You can pick any of the Highlight JS themes you want.
+ * They are listed here:
  * https://thejaredwilcurt.com/vue-doxen/styles#syntax
  */
 import 'highlightjs/styles/ir-black.css';

@@ -1,8 +1,13 @@
 <template>
   <footer aria-label="footer">
+    <!--
+      Please leave in some reference to Vue-Doxen.
+      It is an open source project and has no marketing budget.
+    -->
     <a
       class="vue-doxen-link"
       href="https://TheJaredWilcurt.com/vue-doxen"
+      title="Automated Vue Component Documentation"
     >
       <img
         alt="Vue-Doxen logo"
